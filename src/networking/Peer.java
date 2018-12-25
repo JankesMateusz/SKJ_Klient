@@ -1,14 +1,18 @@
-package client;
+package networking;
 
 public class Peer {
 
     private String hostname;
     private int port;
+    private String number;
 
     private String serverName;
     private int serverPort;
 
 
+    public Peer(String number){
+        this.number = number;
+    }
 
     public void setPort(int port){
         this.port = port;
