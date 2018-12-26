@@ -7,24 +7,22 @@ import tools.Setter;
 
 public class Application {
 
-    private Setter setter;
     private Peer peer;
     private Connector connector;
 
 
     public Application(String number){
         this.peer = new Peer(number);
-        this.setter = new Setter(peer);
         this.connector = new Connector(peer);
     }
 
 
     public void run() throws Exception{
-        peer.setHostname(setter.setIp());
-        peer.setPort(setter.setPort());
+        peer.setHostname("127.168.1.2");  //(new Setter().setIp());
+        peer.setPort(10001);  //(new Setter().setPort());
 
-        peer.setServerName(setter.setIp());
-        peer.setServerPort(setter.setPort());
+        peer.setServerName("127.168.1.1");  //(new Setter().setIp());
+        peer.setServerPort(10000);  //(new Setter().setPort());
 
         connector.connectPeerToServer();
     }

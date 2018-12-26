@@ -5,13 +5,6 @@ import java.util.Scanner;
 
 public class Setter {
 
-    private Peer peer;
-
-
-    public Setter(Peer peer){
-        this.peer = peer;
-    }
-
 
     public String setIp(){
         String ip = "";
