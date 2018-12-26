@@ -2,21 +2,36 @@ package files;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class FilesLister {
 
 
-    public ArrayList<String> files(String directory){
+    public ArrayList<String> getAllFilesList(String directory){
 
-        ArrayList<String> files = new ArrayList<>();
+        ArrayList<String> allFiles = new ArrayList<>();
         File dir = new File(directory);
         File[] dirList = dir.listFiles();
 
         if(dirList != null){
             for(File child : dirList){
-                files.add(child.getName());
+                allFiles.add(child.getName());
             }
         }
-        return files;
+        return allFiles;
+    }
+
+    public HashMap<String, String> files(String directory) throws Exception{
+
+        HashMap<String, String> filesAndChecksums = new HashMap<>();
+        File dir = new File(directory);
+        File[] dirList = dir.listFiles();
+
+        if(dirList != null){
+            for(File child : dirList){
+                filesAndChecksums.put(child.getName(), new CheckSumGetter().getCheckSum(child.getPath()));
+            }
+        }
+        return filesAndChecksums;
     }
 }

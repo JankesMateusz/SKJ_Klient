@@ -5,6 +5,8 @@ import networking.TrackerConnection;
 import networking.Peer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 
@@ -13,9 +15,9 @@ public class Application {
     private Peer peer;
     private TrackerConnection connection;
     private boolean trackerConnection;
-    private ArrayList<String> files;
+    private HashMap<String, String> files;
 
-    public Application(String number){
+    public Application(String number)throws Exception{
         this.peer = new Peer(number);
         this.connection = new TrackerConnection(peer);
         this.files = new FilesLister().files(peer.getDirectory());
@@ -63,8 +65,8 @@ public class Application {
     private void listFiles(){
 
         System.out.println("---- FILES ----");
-        for(String file : files){
-            System.out.println(file);
+        for(Map.Entry<String, String> entry : files.entrySet()){
+            System.out.println(entry.getKey() + " /checksum: " + entry.getValue());
         }
         System.out.println("---------------");
     }
