@@ -3,13 +3,13 @@ package networking;
 import java.net.InetAddress;
 import java.net.Socket;
 
-public class Connector {
+public class TrackerConnection {
 
     private Peer peerServed;
     private Socket connection;
 
 
-    public Connector(Peer peer){
+    public TrackerConnection(Peer peer){
         this.peerServed = peer;
     }
 
