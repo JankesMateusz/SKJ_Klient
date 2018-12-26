@@ -21,7 +21,7 @@ public class TrackerConnection {
         connection = new Socket(address, port);
     }
 
-    public void checkConnection(){
-        System.out.println(connection.isConnected());
+    public boolean checkConnection(){
+        return connection.isConnected();
     }
 }

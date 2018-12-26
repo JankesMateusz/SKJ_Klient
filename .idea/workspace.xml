@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b62bd7a-113c-4acf-ba41-e794c13fd755" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/FilesLister.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SKJ_Klient/networking/Connector.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/networking/Connector.java" afterPath="$PROJECT_DIR$/src/networking/TrackerConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SKJ_Klient/application/Application.class" afterPath="$PROJECT_DIR$/out/production/SKJ_Klient/application/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SKJ_Klient/application/Main.class" afterPath="$PROJECT_DIR$/out/production/SKJ_Klient/application/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SKJ_Klient/networking/Peer.class" afterPath="$PROJECT_DIR$/out/production/SKJ_Klient/networking/Peer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Application.java" afterPath="$PROJECT_DIR$/src/application/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/networking/Peer.java" afterPath="$PROJECT_DIR$/src/networking/Peer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/networking/TrackerConnection.java" afterPath="$PROJECT_DIR$/src/networking/TrackerConnection.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,12 +19,14 @@
       <file leaf-file-name="TrackerConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/TrackerConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="487">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#210#211#0" expanded="true" />
                 <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilesLister.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FilesLister.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/files/FilesLister.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="420">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+            <state relative-caret-position="382">
+              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/application/AppLoop.java" />
         <option value="$PROJECT_DIR$/src/tools/Setter.java" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
-        <option value="$PROJECT_DIR$/src/files/FilesLister.java" />
         <option value="$PROJECT_DIR$/src/networking/Peer.java" />
+        <option value="$PROJECT_DIR$/src/files/FilesLister.java" />
         <option value="$PROJECT_DIR$/src/networking/TrackerConnection.java" />
         <option value="$PROJECT_DIR$/src/application/Application.java" />
       </list>
@@ -469,7 +464,7 @@
       <workItem from="1545751923538" duration="10662000" />
       <workItem from="1545823580533" duration="74000" />
       <workItem from="1545823761538" duration="74000" />
-      <workItem from="1545825266652" duration="6042000" />
+      <workItem from="1545825266652" duration="9041000" />
     </task>
     <servers />
   </component>
@@ -497,11 +492,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16852000" />
+    <option name="totallyTimeSpent" value="19851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -512,7 +506,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -567,6 +561,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#210#211#0" expanded="true" />
             <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -639,6 +635,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#210#211#0" expanded="true" />
             <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,6 +709,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#210#211#0" expanded="true" />
             <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -812,10 +812,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/files/FilesLister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        <state relative-caret-position="420">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -824,20 +824,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/networking/TrackerConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="487">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#210#211#0" expanded="true" />
             <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/FilesLister.java">
+    <entry file="file://$PROJECT_DIR$/src/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="382">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

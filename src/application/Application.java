@@ -32,21 +32,47 @@ public class Application {
         connection.connectPeerToServer();
         trackerConnection = true;
 
-        while(trackerConnection){
+        while(connection.checkConnection()){
             actionManagement();
-            connection.checkConnection();
         }
     }
 
-    public void actionManagement(){
+    public void actionManagement()throws Exception{
         System.out.println(
                 "Choose action:\n" +
                 "1. List my files\n" +
                 "2. Enter file to search for\n" +
                 "3. Exit");
-        int choice;
+        getAction();
+        System.out.println(connection.checkConnection());
+    }
+
+    private void getAction() throws Exception{
+
         Scanner input = new Scanner(System.in);
-        choice = input.nextInt();
-        System.out.println(choice);
+        switch(input.nextInt()){
+            case 1: listFiles();
+                    break;
+            case 2: getFileToFind();
+                    break;
+            case 3: System.exit(0);
+                    break;
+        }
+    }
+
+    private void listFiles(){
+
+        System.out.println("---- FILES ----");
+        for(String file : files){
+            System.out.println(file);
+        }
+        System.out.println("---------------");
+    }
+
+    private void getFileToFind(){
+
+        System.out.println("Enter file: name.type(eg.: photo.jpg)");
+        Scanner input = new Scanner(System.in);
+        String file = input.next();
     }
 }
