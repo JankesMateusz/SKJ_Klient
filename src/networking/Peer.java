@@ -9,9 +9,12 @@ public class Peer {
     private String serverName;
     private int serverPort;
 
+    private String directory;
+
 
     public Peer(String number){
         this.number = number;
+        this.directory = ("D:\\Torrent_" + number);
     }
 
     public void setPort(int port){
@@ -47,4 +50,6 @@ public class Peer {
     public int getServerPort() {
         return serverPort;
     }
+
+    public String getDirectory(){return directory;}
 }

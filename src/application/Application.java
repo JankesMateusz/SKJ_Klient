@@ -1,19 +1,24 @@
 package application;
 
-import networking.Connector;
+import files.FilesLister;
+import networking.TrackerConnection;
 import networking.Peer;
-import tools.Setter;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Application {
 
     private Peer peer;
-    private Connector connector;
-
+    private TrackerConnection connection;
+    private boolean trackerConnection;
+    private ArrayList<String> files;
 
     public Application(String number){
         this.peer = new Peer(number);
-        this.connector = new Connector(peer);
+        this.connection = new TrackerConnection(peer);
+        this.files = new FilesLister().files(peer.getDirectory());
     }
 
 
@@ -24,10 +29,24 @@ public class Application {
         peer.setServerName("127.168.1.1");  //(new Setter().setIp());
         peer.setServerPort(10000);  //(new Setter().setPort());
 
-        connector.connectPeerToServer();
+        connection.connectPeerToServer();
+        trackerConnection = true;
+
+        while(trackerConnection){
+            actionManagement();
+            connection.checkConnection();
+        }
     }
 
-    public void display(String msg){
-        System.out.println(msg);
+    public void actionManagement(){
+        System.out.println(
+                "Choose action:\n" +
+                "1. List my files\n" +
+                "2. Enter file to search for\n" +
+                "3. Exit");
+        int choice;
+        Scanner input = new Scanner(System.in);
+        choice = input.nextInt();
+        System.out.println(choice);
     }
 }
