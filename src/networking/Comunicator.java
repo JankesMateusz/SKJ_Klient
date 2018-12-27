@@ -10,14 +10,19 @@ public class Comunicator {
     private TrackerConnection trackerConnection;
     private PrintWriter out;
     private BufferedReader in;
+    private Socket socket;
 
     public Comunicator(TrackerConnection connectionToHandle)throws Exception{
 
         this.trackerConnection = connectionToHandle;
-        Socket socket = trackerConnection.getConnection();
-        out = new PrintWriter(socket.getOutputStream(), true);
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        this.socket = trackerConnection.getConnection();
+        this.out = new PrintWriter(socket.getOutputStream(), true);
+        this.in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     }
 
+    public void sendInfoAboutMe(){
+
+
+    }
 
 }

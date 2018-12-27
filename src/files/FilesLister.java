@@ -21,7 +21,7 @@ public class FilesLister {
         return allFiles;
     }
 
-    public HashMap<String, String> files(String directory) throws Exception{
+    public HashMap<String, String> filesMap(String directory) throws Exception{
 
         HashMap<String, String> filesAndChecksums = new HashMap<>();
         File dir = new File(directory);

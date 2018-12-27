@@ -18,7 +18,7 @@ public class Application {
     public Application(String number)throws Exception{
         this.peer = new Peer(number);
         this.connection = new TrackerConnection(peer);
-        this.files = new FilesLister().files(peer.getDirectory());
+        this.files = new FilesLister().filesMap(peer.getDirectory());
     }
 
 
@@ -41,7 +41,7 @@ public class Application {
     public void actionManagement()throws Exception{
         System.out.println(
                 "Choose action:\n" +
-                "1. List my files\n" +
+                "1. List my filesMap\n" +
                 "2. Enter file to search for\n" +
                 "3. Exit");
         getAction();
