@@ -24,4 +24,8 @@ public class TrackerConnection {
     public boolean checkConnection(){
         return connection.isConnected();
     }
+
+    public Socket getConnection(){
+        return connection;
+    }
 }

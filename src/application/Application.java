@@ -3,8 +3,6 @@ package application;
 import files.FilesLister;
 import networking.TrackerConnection;
 import networking.Peer;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -25,6 +23,7 @@ public class Application {
 
 
     public void run() throws Exception{
+        trackerConnection = true;
         peer.setHostname("127.168.1.2");  //(new Setter().setIp());
         peer.setPort(10001);  //(new Setter().setPort());
 
@@ -34,7 +33,7 @@ public class Application {
         connection.connectPeerToServer();
         trackerConnection = true;
 
-        while(connection.checkConnection()){
+        while(trackerConnection){
             actionManagement();
         }
     }
