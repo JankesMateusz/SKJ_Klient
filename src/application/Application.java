@@ -1,6 +1,7 @@
 package application;
 
 import files.FilesLister;
+import networking.Communicator;
 import networking.TrackerConnection;
 import networking.Peer;
 import java.util.HashMap;
@@ -19,6 +20,7 @@ public class Application {
         this.peer = new Peer(number);
         this.connection = new TrackerConnection(peer);
         this.files = new FilesLister().filesMap(peer.getDirectory());
+        peer.setFileList(new FilesLister().getAllFilesList(peer.getDirectory()));
     }
 
 
@@ -32,6 +34,7 @@ public class Application {
 
         connection.connectPeerToServer();
         trackerConnection = true;
+        new Communicator(connection, peer).introduce();
 
         while(trackerConnection){
             actionManagement();
@@ -56,7 +59,8 @@ public class Application {
                     break;
             case 2: getFileToFind();
                     break;
-            case 3: System.exit(0);
+            case 3: new Communicator(connection, peer).sendRequest(2);
+                    System.exit(0);
                     break;
         }
     }
@@ -70,10 +74,11 @@ public class Application {
         System.out.println("---------------");
     }
 
-    private void getFileToFind(){
+    private void getFileToFind()throws Exception{
 
         System.out.println("Enter file: name.type(eg.: photo.jpg)");
         Scanner input = new Scanner(System.in);
         String file = input.next();
+        new Communicator(connection, peer).getFile(file);
     }
 }

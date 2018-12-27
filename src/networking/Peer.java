@@ -1,5 +1,7 @@
 package networking;
 
+import java.util.ArrayList;
+
 public class Peer {
 
     private String hostname;
@@ -10,6 +12,7 @@ public class Peer {
     private int serverPort;
 
     private String directory;
+    private ArrayList<String> fileList;
 
 
     public Peer(String number){
@@ -52,4 +55,14 @@ public class Peer {
     }
 
     public String getDirectory(){return directory;}
+
+    public void setFileList(ArrayList<String> files){
+        fileList = files;
+    }
+
+    public ArrayList<String> getFileList(){return fileList;}
+
+    public String getNumber() {
+        return number;
+    }
 }
